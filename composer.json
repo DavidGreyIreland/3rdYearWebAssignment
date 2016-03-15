@@ -7,5 +7,8 @@
     "scripts":{
         "phpunit":"php phpunit.phar --log-tap ./tests/log.txt",
         "phpunit-coverage":"php phpunit.phar --coverage-html ./tests/coverage"
+    },
+    "require": {
+        "mattsmithdev/pdo-crud-for-free": "dev-master"
     }
 }
