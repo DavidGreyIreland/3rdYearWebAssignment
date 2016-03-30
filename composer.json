@@ -1,14 +1,12 @@
 {
+    "require": {
+        "twig/twig": "^1.22",
+        "silex/silex": "^1.3",
+        "mattsmithdev/pdo-crud-for-free": "dev-master"
+    },
     "autoload":{
         "psr-4":{
-            "DavidGreyItb\\":"src/"
+            "Itb\\":"src"
         }
-    },
-    "scripts":{
-        "phpunit":"php phpunit.phar --log-tap ./tests/log.txt",
-        "phpunit-coverage":"php phpunit.phar --coverage-html ./tests/coverage"
-    },
-    "require": {
-        "mattsmithdev/pdo-crud-for-free": "dev-master"
     }
 }
