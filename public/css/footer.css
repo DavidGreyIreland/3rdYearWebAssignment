@@ -1,0 +1,11 @@
+footer {
+    background-color: darkgreen;
+    border: 0.2rem black solid;
+    /*border-bottom: 0.5rem black solid;*/
+    color: white;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    text-align: right;
+    width: 69%;
+    margin-left: 11%;
+}

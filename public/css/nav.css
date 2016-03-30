@@ -1,0 +1,41 @@
+/* ------- nav ------- */
+nav {
+    margin-left: 10%;
+}
+
+nav ul {
+    display: flex;
+    width: 80%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    flex: 1;
+    padding: 1rem;
+}
+
+nav a {
+    display: block;
+
+    border: 0.2rem solid black;
+    padding: 0.2rem;
+
+    background: lightseagreen;
+    text-align: center;
+
+    color: black;
+    text-decoration:none;
+}
+
+nav a:hover {
+    text-decoration:underline;
+    background-color: lightskyblue;
+}
+
+nav a.current_page {
+    color: white;
+    background: green;
+    text-decoration:none;
+}

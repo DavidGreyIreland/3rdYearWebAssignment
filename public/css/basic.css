@@ -1,0 +1,56 @@
+body {
+	background: #CCFFCC;
+}
+
+header {
+    text-align: center;
+}
+
+/* ------- table contents --------- */
+table, th, td, tr {
+    border: solid black 0.1rem
+}
+
+td {
+    width: 9rem;
+    text-align: center;
+    background-color: white;
+}
+
+th {
+    background-color: darkgreen;
+    color: white;
+}
+
+#baseContainer {
+    min-height: 750px;
+}
+/****************************************************************/
+/************************** index container *********************/
+
+#indexContainer {
+    margin-left: 30%;
+}
+
+#indexContainer h1{
+    margin-left: 15%;
+}
+
+/****************************************************************/
+/************************** login container *********************/
+
+.loginContainer {
+    margin-left: 38%;
+}
+
+.loginContainer h1{
+    margin-left: 6%;
+}
+
+.loginContainer #password {
+    padding-right: 4px;
+}
+
+.loginContainer input[type=submit] {
+    margin-left: 8rem;
+}
