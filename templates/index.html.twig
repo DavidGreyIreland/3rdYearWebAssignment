@@ -1,0 +1,77 @@
+{% extends '_base.html.twig' %}
+
+{# ------------------------------------------------- #}
+{% block pageTitle %}Home page{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block indexLinkStyle %}current_page{% endblock %}
+
+{# ------------------------------------------------- #}
+
+{% block main %}
+
+{#    <!--creates a table-->
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Current Belt Grading</th>
+            <th>Next Belt Grading Syllabus</th>
+            <th>Current Status</th>
+            <th>Required Status</th>
+            <th>Next Grading</th>
+        </tr>
+
+        {% for student in students %}
+            <tr>
+                <!--calls from the ClassTable.php class the following methods-->
+                <td>{{ student.studentId }}</td>
+                <td>{{ student.currentBeltGrade }}</td>
+                <td>{{ student.nextBeltGradingSyllabus }}</td>
+                <td>{{ student.currentStatus }}</td>
+                <td>{{ student.requiredStatus }}</td>
+                <td>{{ student.nextGrading }}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>#}
+
+
+{#
+(1) database connectivity needs index.html.twig file & main controller.
+(2) the variable e.g. classTables in the for loop below is taken from the main
+    controller from within the $argsArray[].
+(3) the classTable in the for loop can be any variable name but must match the variables within the <td>.
+(4) the .id in the <td> below must match the private variable names in the ClassTable.php file.
+#}
+    <aside id="indexLeft"></aside>
+
+    <section id="indexContainer">
+        <h1>Weekly Schedule</h1>
+
+        <!--creates a table-->
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Activity</th>
+                <th>Time</th>
+                <th>Grade</th>
+            </tr>
+
+            {% for classTable in classTables %}
+                <tr>
+                    <!--calls from the ClassTable.php class the following methods-->
+                    <td>{{ classTable.day }}</td>
+                    <td>{{ classTable.activity }}</td>
+                    <td>{{ classTable.time }}</td>
+                    <td>{{ classTable.grade }}</td>
+                </tr>
+
+            {% endfor %}
+
+        </table>
+    </section>
+
+    <aside id="indexRight"></aside>
+
+{% endblock %}

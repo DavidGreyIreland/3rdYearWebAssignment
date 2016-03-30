@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gym {% block title %}{% endblock %}</title>
+    <style>
+        @import "/css/basic.css";
+        @import "/css/nav.css";
+        @import "/css/footer.css";
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li>
+            <a href="/" class="{% block indexLinkStyle %}{% endblock %}">Home page</a>
+        </li>
+        <li>
+            <a href="/contact" class="{% block contactLinkStyle %}{% endblock %}">Contact Us</a>
+        </li>
+        <li>
+            <a href="/sitemap" class="{% block sitemapLinkStyle %}{% endblock %}">Site Map</a>
+        </li>
+        <li>
+            <a href="/login" class="{% block loginLinkStyle %}{% endblock %}">Login</a>
+        </li>
+    </ul>
+</nav>
+
+<div id="baseContainer">
+    {% block main %}
+
+    {% endblock %}
+</div>
+
+<footer>
+    2016 &copy; David Grey B00074647
+</footer>
+</body>
+</html>

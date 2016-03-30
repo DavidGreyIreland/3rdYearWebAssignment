@@ -1,0 +1,132 @@
+{% extends '_base.html.twig' %}
+
+{# ------------------------------------------------- #}
+{% block pageTitle %}Login page{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block loginLinkStyle %}current_page{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block main %}
+
+<h1>
+    Login
+</h1>
+
+    <form id="form_page" action="confirmation.html" autocomplete="on" method="post" oninput="x.value=parseInt(range.value)">
+
+        <article>
+            <strong>Complete this form and press the Send button</strong><strong><span class="asterix">* Indicates a required field</span></strong>
+        </article>
+
+        <fieldset>
+
+            <legend>
+                Personal Details
+            </legend>
+
+            <section id="personalDetails">
+
+                <ul>
+
+                    <li>
+                        <span id="name"><span class="left">Name:</span><input type="text" size="30" maxlength="30" name="name" placeholder="e.g. John Doe" autofocus required></span><span class="asterix">*</span>
+                    </li>
+
+                    <li>
+                        <span id="phone"><span class="left">Phone number:</span><input type="tel" name="phone" placeholder="e.g. 087 1234567" pattern="\d{10}" title="Phone Number (Format:***+*******)" required></span><span class="asterix">*</span>
+                    </li>
+
+                    <li>
+                        <span id="date"><span class="left">Date of Birth:</span><input type="date" name="date" min="2010-01-01" max="2014-05-01" required></span><span class="asterix">*</span>
+                    </li>
+
+                    <li>
+                        <span id="password"><span class="left">Password:</span><input type="password" name="password" placeholder="e.g. abcd1234" pattern="[A-Za-z]{4}[0-9]{4}" on keyup="checkPass(); return false;" required></span><span class="asterix">*</span> <span id="confirmMessage"></span>
+                    </li>
+
+                    <li>
+                        <span id="repassword"><span class="left">Re-enter Password:</span><input type="password" placeholder="e.g. abcd1234" name="password" pattern="[A-Za-z]{4}[0-9]{4}" required></span><span class="asterix">*</span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ************** Membership ************** -->
+
+            <fieldset>
+
+                <legend>
+                    Current Belt
+                </legend>
+
+                <div class="belts">
+
+                    <section>
+                        <input type="radio" name="belts" id="cat1">
+                        <label>10th kup white belt</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat2">
+                        <label>9th kup yellow tag</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat3">
+                        <label>8th kup yellow belt</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat4">
+                        <label>7th kup green tag</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat5">
+                        <label>6th kup green belt</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat6">
+                        <label>5th kup blue tag</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat7">
+                        <label>4th kup blue belt</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat8">
+                        <label>3th kup red tag</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat9">
+                        <label>2th kup red belt</label>
+                    </section>
+
+                    <section>
+                        <input type="radio" name="belts" id="cat10">
+                        <label>N/A</label>
+                    </section>
+
+                </div>
+
+            </fieldset>
+
+
+            <div class="center">
+
+                <input type="submit" class="red" name="submit" value="Send">
+
+                <input type="reset" class="red" name="reset" value="Clear">
+
+            </div>
+
+        </fieldset>
+    </form>
+
+{% endblock %}
