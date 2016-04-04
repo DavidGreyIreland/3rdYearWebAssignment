@@ -16,7 +16,7 @@ $app->get('/contact',      controller('Itb', 'main/contact'));
 $app->get('/sitemap',      controller('Itb', 'main/sitemap'));
 
 // ------ SECURE PAGES ----------
-$app->get('/admin',  controller('Itb', 'main/contact'));
+$app->get('/admin',  controller('Itb', 'admin/index'));
 $app->get('/adminCodes',  controller('Itb', 'admin/codes'));
 
 // ------ login routes GET ------------
