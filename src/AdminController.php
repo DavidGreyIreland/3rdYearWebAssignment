@@ -1,21 +1,9 @@
 <?php
-
 namespace Itb;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
-/**
- * Class AdminController
- *
- * simple authentication using Silex session object
- * $app['session']->set('isAuthenticated', false);
- *
- * but the propert way to do it:
- * https://gist.github.com/brtriver/1740012
- *
- * @package Hdip\Controller
- */
 class AdminController
 {
     public function isAuthenticated()
@@ -44,7 +32,7 @@ class AdminController
 
         // render (draw) template
         // ------------
-        $templateName = 'admin/index';// index is within folder admin in templates folder
+        $templateName = '/adminIndex';// index is within folder admin in templates folder
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
 
