@@ -19,12 +19,16 @@ $app->get('/sitemap',      controller('Itb', 'main/sitemap'));
 $app->get('/admin',  controller('Itb', 'admin/index'));
 $app->get('/adminCodes',  controller('Itb', 'admin/codes'));
 
+
+$app->get('/adminIndex',  controller('Itb', 'admin/adminIndex'));
+$app->get('/studentIndex',  controller('Itb', 'admin/studentIndex'));
+
 // ------ login routes GET ------------
-$app->get('/login',  controller('Itb', 'user/login'));
-$app->get('/logout',  controller('Itb', 'user/logout'));
+$app->get('/login',  controller('Itb', 'login/login'));
+$app->get('/logout',  controller('Itb', 'login/logout'));
 
 // ------ login routes POST (process submitted form)     ------------
-$app->post('/login',  controller('Itb', 'user/processLogin'));
+$app->post('/login',  controller('Itb', 'login/processLogin'));
 
 
 
