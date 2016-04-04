@@ -5,33 +5,23 @@ namespace Itb;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
-/**
- * Class UserController
- *
- * simple authentication using Silex session object
- * $app['session']->set('isAuthenticated', false);
- *
- * but the proper way to do it:
- * https://gist.github.com/brtriver/1740012
- *
- * @package Itb\Controller
- */
 class UserController
 {
     // action for POST route:    /processLogin
     public function processLoginAction(Request $request, Application $app)
     {
-        // retrieve 'name' from GET params in Request object
-        $username = $request->get('username');
-        $password = $request->get('password');
-        //$classTables = ClassTable::getAll();
-        /**************************************************/
-        /**************************************************/
-        /**************************************************/
-        /**************************************************/
-        /*******************for loop around to search through the database below!!!******************/
-        // authenticate!
-        if ('david' === $username && '1234' === $password) {
+        // default is bad login
+        $isLoggedIn = false;
+
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+
+        // search for user with username in repository
+        $isLoggedIn = User::canFindMatchingUsernameAndPassword($username, $password);
+
+        // action depending on login success
+        if($isLoggedIn)
+        {
             // store username in 'user' in 'session'
             $app['session']->set('user', array('username' => $username) );
             // success - redirect to the secure admin home page
@@ -77,5 +67,30 @@ class UserController
         // ------------
         $templateName = 'index';
         return $app['twig']->render($templateName . '.html.twig', []);
+    }
+
+    //--------- helper functions -------
+    public function isLoggedInFromSession()
+    {
+        $isLoggedIn = false;
+
+        // user is logged in if there is a 'user' entry in the SESSION superglobal
+        if(isset($_SESSION['user'])){
+            $isLoggedIn = true;
+        }
+
+        return $isLoggedIn;
+    }
+
+    public function usernameFromSession()
+    {
+        $username = '';
+
+        // extract username from SESSION superglobal
+        if (isset($_SESSION['user'])) {
+            $username = $_SESSION['user'];
+        }
+
+        return $username;
     }
 }
