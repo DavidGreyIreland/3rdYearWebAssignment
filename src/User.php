@@ -6,13 +6,13 @@ use Mattsmithdev\PdoCrud\DatabaseManager;
 
 class User extends DatabaseTable
 {
-    const ROLE_USER = 1;
-    const ROLE_ADMIN = 2;
+    const ROLE_USER = 0;
+    const ROLE_ADMIN = 1;
 
     private $id;
     private $username;
     private $password;
-    private $role;
+    private $admin;
 
     /**
      * @return mixed
@@ -57,17 +57,20 @@ class User extends DatabaseTable
     /**
      * @return mixed
      */
-    public function getRole()
+    public static function getAdmin($username)
     {
-        return $this->role;
+        $user = User::getOneByUsername($username);
+        $admin = $user->admin;
+
+        return $admin;
     }
 
     /**
      * @param mixed $role
      */
-    public function setRole($role)
+    public function setAdmin($admin)
     {
-        $this->role = $role;
+        $this->admin = $admin;
     }
 
     /**
@@ -126,14 +129,11 @@ class User extends DatabaseTable
         $statement->setFetchMode(\PDO::FETCH_CLASS, __CLASS__);
         $statement->execute();
 
-        if ($object = $statement->fetch()) {
+        if ($object = $statement->fetch())
+        {
             return $object;
         } else {
             return null;
         }
     }
-
-
-
-
 }
