@@ -6,8 +6,62 @@
 {# ------------------------------------------------- #}
 {% block main %}
 
-<h1>
-    Admin Page
-</h1>
+    <section id="adminIndexContainer">
+
+        <h1>
+            (Admin Page)
+        </h1>
+
+        <h2>Students</h2>
+
+        <form method="post" action="/adminStudents">
+
+            <table>
+                <tr>
+                    <th>First name</th>
+                    <th>Surname</th>
+                    <th>Current Belt Grading</th>
+                    <th>Next Belt Grading Syllabus</th>
+                    <th>Current Status</th>
+                    <th>Required Status</th>
+                    <th>Next Grading</th>
+                    <th>Admin</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                {% for student in students %}
+                    <tr>
+                        <!--calls from the Student.php class the following methods-->
+                        <td>{{ student.firstName }}</td>
+                        <td>{{ student.surname }}</td>
+                        <td>{{ student.currentBeltGrade }}</td>
+                        <td>{{ student.nextBeltGradingSyllabus }}</td>
+                        <td>{{ student.currentStatus }}</td>
+                        <td>{{ student.requiredStatus }}</td>
+                        <td>{{ student.nextGrading }}</td>
+                        <td>{{ student.admin }}</td>
+                        <td class="studentCRUDButton"><input type="button" value="Edit"></td>
+                        <td class="studentCRUDButton"><input type="button" value="Delete"></td>
+                    </tr>
+                {% endfor %}
+
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td class="studentCRUDButton"><input type="button" value="Add"></td>
+                    </tr>
+            </table>
+
+        </form>
+
+    </section>
+
 
 {% endblock %}
