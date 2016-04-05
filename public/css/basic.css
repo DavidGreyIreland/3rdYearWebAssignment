@@ -7,7 +7,7 @@ header {
 }
 
 /* ------- table contents --------- */
-table, th, td, tr {
+th, td, tr {
     border: solid black 0.1rem
 }
 
@@ -53,4 +53,27 @@ th {
 
 .loginContainer input[type=submit] {
     margin-left: 8rem;
+}
+
+/****************************************************************/
+/************************** adminLogin container *********************/
+
+#adminIndexContainer table {
+    margin-left: 11%;
+}
+
+#adminIndexContainer h1{
+     margin-left: 43%;
+ }
+
+#adminIndexContainer h2{
+    margin-left: 44%;
+}
+
+#adminIndexContainer th, #adminIndexContainer td, #adminIndexContainer input[type=text] {
+    width: 7.75rem;
+}
+
+.studentCRUDButton input[type=button] {
+    width: 7.75rem;
 }
