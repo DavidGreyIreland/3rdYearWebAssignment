@@ -11,9 +11,10 @@ class AdminController
     // will we allow access to the Admin home?
     public function adminIndexAction(Request $request, Application $app)
     {
-        // store username into args array
-        $argsArray = array();
-
+        $students = Student::getAll();
+        $argsArray = [
+            'students' => $students,
+        ];
         $templateName = 'adminIndex';// index is within folder admin in templates folder
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
