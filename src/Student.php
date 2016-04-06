@@ -2,6 +2,7 @@
 namespace Itb;
 
 use Mattsmithdev\PdoCrud\DatabaseTable;
+use Mattsmithdev\PdoCrud\DatabaseManager;
 
 class Student extends DatabaseTable
 {
@@ -159,5 +160,30 @@ class Student extends DatabaseTable
         return $this->studentId;
     }
 
+    /**
+     * if record exists with $username, return User object for that record
+     * otherwise return 'null'
+     *
+     * @param $username
+     *
+     * @return mixed|null
+     */
+    public static function getOneByUsername($studentId)
+    {
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
 
+        $sql = 'SELECT * FROM students WHERE studentId=:studentId';
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':studentId', $studentId, \PDO::PARAM_STR);
+        $statement->setFetchMode(\PDO::FETCH_CLASS, __CLASS__);
+        $statement->execute();
+
+        if ($object = $statement->fetch())
+        {
+            return $object;
+        } else {
+            return null;
+        }
+    }
 } 

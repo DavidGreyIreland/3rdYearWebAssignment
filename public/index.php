@@ -10,13 +10,22 @@ require_once __DIR__ . '/../src/utility/helperFunctions.php';
 //use Itb\AdminController;
 
 
-
+// ------ MAIN PAGES ----------
 $app->get('/',      controller('Itb', 'main/index'));
 $app->get('/contact',      controller('Itb', 'main/contact'));
 $app->get('/sitemap',      controller('Itb', 'main/sitemap'));
 
 // ------ SECURE PAGES ----------
 $app->get('/admin',  controller('Itb', 'admin/adminIndex'));
+$app->get('/adminCodes',  controller('Itb', 'admin/codes'));
+
+
+// ------ editing students ----------
+$app->get('/addStudent',  controller('Itb', 'admin/addStudent'));
+$app->get('/removeStudent',  controller('Itb', 'admin/removeStudent'));
+$app->get('/editStudent',  controller('Itb', 'admin/editStudent'));
+$app->get('/removeStudentForm',  controller('Itb', 'admin/removeStudentForm'));
+
 $app->get('/adminCodes',  controller('Itb', 'admin/codes'));
 
 // ------ login routes GET ------------

@@ -12,9 +12,9 @@ th, td, tr {
 }
 
 td {
-    width: 9rem;
     text-align: center;
     background-color: white;
+    min-width: 8rem;
 }
 
 th {
@@ -58,22 +58,77 @@ th {
 /****************************************************************/
 /************************** adminLogin container *********************/
 
+#adminIndexContainer {
+    display: flex;
+}
+
+#adminIndexMain {
+    flex: 4.5;
+}
+
 #adminIndexContainer table {
-    margin-left: 11%;
+    margin-left: 13%;
 }
 
 #adminIndexContainer h1{
-     margin-left: 43%;
+     margin-left: 51%;
  }
 
 #adminIndexContainer h2{
-    margin-left: 44%;
+    margin-left: 54%;
 }
 
 #adminIndexContainer th, #adminIndexContainer td, #adminIndexContainer input[type=text] {
-    width: 7.75rem;
+    width: 10rem;
 }
 
 .studentCRUDButton input[type=button] {
     width: 7.75rem;
+}
+
+/****************************************************************/
+/************************** admin aside nav container *********************/
+
+#adminIndexContainer aside ul {
+    width: 50%;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40%;
+}
+
+#adminIndexContainer aside{
+    flex: 1;
+}
+
+#adminIndexContainer aside li {
+    padding: .5rem;
+}
+
+#adminIndexContainer aside a {
+    display: block;
+    border: 0.2rem solid black;
+    padding: 0.2rem;
+    background: lightseagreen;
+    text-align: center;
+    color: black;
+    text-decoration:none;
+}
+
+#removeStudentContainer input[type=submit] {
+     width: 10rem;
+     height: 1.5rem;
+ }
+
+#removeStudentMain table {
+    margin-left: 10%;
+}
+
+#removeStudentContainer h1 {
+    margin-left: 38%;
+}
+
+#removeStudentContainer h2 {
+    margin-left: 44%;
 }

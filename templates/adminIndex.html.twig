@@ -6,15 +6,15 @@
 {# ------------------------------------------------- #}
 {% block main %}
 
-    <section id="adminIndexContainer">
+    <div id="adminIndexContainer">
 
-        <h1>
-            (Admin Page)
-        </h1>
+        <div id="adminIndexMain">
 
-        <h2>Students</h2>
+            <h1>
+                (Admin Page)
+            </h1>
 
-        <form method="post" action="/adminStudents">
+            <h2>Students</h2>
 
             <table>
                 <tr>
@@ -26,8 +26,6 @@
                     <th>Required Status</th>
                     <th>Next Grading</th>
                     <th>Admin</th>
-                    <th></th>
-                    <th></th>
                 </tr>
 
                 {% for student in students %}
@@ -38,30 +36,44 @@
                         <td>{{ student.currentBeltGrade }}</td>
                         <td>{{ student.nextBeltGradingSyllabus }}</td>
                         <td>{{ student.currentStatus }}</td>
-                        <td>{{ student.requiredStatus }}</td>
+                        <td>{{ student.requiredStatus }}</td>`
                         <td>{{ student.nextGrading }}</td>
                         <td>{{ student.admin }}</td>
-                        <td class="studentCRUDButton"><input type="button" value="Edit"></td>
-                        <td class="studentCRUDButton"><input type="button" value="Delete"></td>
                     </tr>
                 {% endfor %}
 
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td class="studentCRUDButton"><input type="button" value="Add"></td>
-                    </tr>
+                    {#<tr>
+                        <td><input type="text" name="firstName"></td>
+                        <td><input type="text" name="surname"></td>
+                        <td><input type="text" name="currentBeltGrading"></td>
+                        <td><input type="text" name="nextBeltGradingSyllabus"></td>
+                        <td><input type="text" name="currentStatus"></td>
+                        <td><input type="text" name="requiredStatus"></td>
+                        <td><input type="text" name="nextGrading"></td>
+                        <td><input type="text" name="admin"></td>
+                    </tr>#}
             </table>
 
-        </form>
+    {#            <td class="studentCRUDButton"><input type="button" value="Edit"></td>
+                <td class="studentCRUDButton"><input type="button" value="Delete"></td>
+                <td class="studentCRUDButton"><input type="button" value="Add"></td>#}
 
-    </section>
+        </div>
 
+        <aside>
+            <ul>
+                <li>
+                    <a href="/addStudent" class="{% block addStudentLinkStyle %}{% endblock %}">Add</a>
+                </li>
+                <li>
+                    <a href="/removeStudent" class="{% block removeStudentLinkStyle %}{% endblock %}">Remove</a>
+                </li>
+                <li>
+                    <a href="/editStudent" class="{% block editStudentLinkStyle %}{% endblock %}">Edit</a>
+                </li>
+            </ul>
+        </aside>
+
+    </div>
 
 {% endblock %}

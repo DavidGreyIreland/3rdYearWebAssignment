@@ -12,7 +12,7 @@ class User extends DatabaseTable
     private $id;
     private $username;
     private $password;
-    private $admin;
+    private $role;
 
     /**
      * @return mixed
@@ -57,20 +57,17 @@ class User extends DatabaseTable
     /**
      * @return mixed
      */
-    public static function getAdmin($username)
+    public function getRole()
     {
-        $user = User::getOneByUsername($username);
-        $admin = $user->admin;
-
-        return $admin;
+        return $this->role;
     }
 
     /**
      * @param mixed $role
      */
-    public function setAdmin($admin)
+    public function setRole($role)
     {
-        $this->admin = $admin;
+        $this->role = $role;
     }
 
     /**
@@ -104,29 +101,24 @@ class User extends DatabaseTable
         // hashed correct password
         $hashedStoredPassword = $user->getPassword();
 
-        if($hashedStoredPassword == $password)
+        return password_verify($password, $hashedStoredPassword);
+
+/*        if($hashedStoredPassword == $password)
         {
             return true;
-        }
+        }*/
     }
 
     public static function canFindMatchingUsernameAndRole($username)
     {
         $user = User::getOneByUsername($username);
-        $role = User::getOneById($role);
         // if no record has this username, return FALSE
         if(null == $user)
         {
             return false;
         }
 
-        // hashed correct password
-        $hashedStoredPassword = $user->getPassword();
-
-        if($hashedStoredPassword == $password)
-        {
-            return true;
-        }
+        return $user->getRole();
     }
 
     /**

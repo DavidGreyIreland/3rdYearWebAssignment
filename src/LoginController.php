@@ -18,14 +18,25 @@ class LoginController
 
         // search for user with username in repository
         $isLoggedIn = User::canFindMatchingUsernameAndPassword($username, $password);
-
+        $isRole = User::canFindMatchingUsernameAndRole($username);
         // action depending on login success
         if($isLoggedIn)
         {
-            // store username in 'user' in 'session'
-            $app['session']->set('user', array('username' => $username) );
-            // success - redirect to the secure admin home page
-            return $app->redirect('/admin');
+            if($isRole)
+            {
+                // store username in 'user' in 'session'
+                $app['session']->set('user', array('username' => $username) );
+                // success - redirect to the secure admin home page
+                return $app->redirect('/admin');
+            }
+            else
+            {
+                // store username in 'user' in 'session'
+                $app['session']->set('user', array('username' => $username) );
+                // success - redirect to the secure admin home page
+                return $app->redirect('/student');
+            }
+
         }
 
         // login page with error message
