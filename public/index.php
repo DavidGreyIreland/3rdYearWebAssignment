@@ -23,8 +23,10 @@ $app->get('/adminCodes',  controller('Itb', 'admin/codes'));
 // ------ editing students ----------
 $app->get('/addStudent',  controller('Itb', 'admin/addStudent'));
 $app->get('/removeStudent',  controller('Itb', 'admin/removeStudent'));
-$app->get('/editStudent',  controller('Itb', 'admin/editStudent'));
-$app->get('/removeStudentForm',  controller('Itb', 'admin/removeStudentForm'));
+$app->get('/updateStudent',  controller('Itb', 'admin/updateStudent'));
+$app->get('/removeStudentForm/{id}',  controller('Itb', 'admin/removeStudentForm'));
+$app->post('/addStudentForm',  controller('Itb', 'admin/addStudentForm'));
+$app->get('/updateStudentForm/{id}',  controller('Itb', 'admin/updateStudentForm'));
 
 $app->get('/adminCodes',  controller('Itb', 'admin/codes'));
 
