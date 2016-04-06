@@ -110,6 +110,25 @@ class User extends DatabaseTable
         }
     }
 
+    public static function canFindMatchingUsernameAndRole($username)
+    {
+        $user = User::getOneByUsername($username);
+        $role = User::getOneById($role);
+        // if no record has this username, return FALSE
+        if(null == $user)
+        {
+            return false;
+        }
+
+        // hashed correct password
+        $hashedStoredPassword = $user->getPassword();
+
+        if($hashedStoredPassword == $password)
+        {
+            return true;
+        }
+    }
+
     /**
      * if record exists with $username, return User object for that record
      * otherwise return 'null'
