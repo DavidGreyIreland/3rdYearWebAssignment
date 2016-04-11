@@ -38,25 +38,11 @@
                         <td>{{ student.currentStatus }}</td>
                         <td>{{ student.requiredStatus }}</td>`
                         <td>{{ student.nextGrading }}</td>
-                        <td>{{ student.admin }}</td>
+                        <td>{{ student.role }}</td>
                     </tr>
                 {% endfor %}
 
-                    {#<tr>
-                        <td><input type="text" name="firstName"></td>
-                        <td><input type="text" name="surname"></td>
-                        <td><input type="text" name="currentBeltGrading"></td>
-                        <td><input type="text" name="nextBeltGradingSyllabus"></td>
-                        <td><input type="text" name="currentStatus"></td>
-                        <td><input type="text" name="requiredStatus"></td>
-                        <td><input type="text" name="nextGrading"></td>
-                        <td><input type="text" name="admin"></td>
-                    </tr>#}
             </table>
-
-    {#            <td class="studentCRUDButton"><input type="button" value="Edit"></td>
-                <td class="studentCRUDButton"><input type="button" value="Delete"></td>
-                <td class="studentCRUDButton"><input type="button" value="Add"></td>#}
 
         </div>
 
@@ -69,7 +55,7 @@
                     <a href="/removeStudent" class="{% block removeStudentLinkStyle %}{% endblock %}">Remove</a>
                 </li>
                 <li>
-                    <a href="/editStudent" class="{% block editStudentLinkStyle %}{% endblock %}">Edit</a>
+                    <a href="/updateStudent" class="{% block updateStudentLinkStyle %}{% endblock %}">Update</a>
                 </li>
             </ul>
         </aside>

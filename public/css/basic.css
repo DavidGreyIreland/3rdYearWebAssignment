@@ -14,7 +14,7 @@ th, td, tr {
 td {
     text-align: center;
     background-color: white;
-    min-width: 8rem;
+    min-width: 6rem;
 }
 
 th {
@@ -82,10 +82,6 @@ th {
     width: 10rem;
 }
 
-.studentCRUDButton input[type=button] {
-    width: 7.75rem;
-}
-
 /****************************************************************/
 /************************** admin aside nav container *********************/
 
@@ -121,14 +117,32 @@ th {
      height: 1.5rem;
  }
 
-#removeStudentMain table {
+#removeStudentMain table, #updateStudentMain table
+{
     margin-left: 10%;
 }
 
-#removeStudentContainer h1 {
+#removeStudentContainer h1, #updateStudentMain h1 {
     margin-left: 38%;
 }
 
-#removeStudentContainer h2 {
+#removeStudentContainer h2, #updateStudentMain h2 {
+     margin-left: 44%;
+ }
+
+#addStudentContainer h1 {
+    margin-left: 38%;
+}
+
+#addStudentContainer h2 {
     margin-left: 44%;
+}
+
+#addStudentContainer input[type=submit], #updateStudentContainer input[type=submit] {
+    width: 10rem;
+    height: 1.5rem;
+}
+
+#addStudentContainer input[type=text], #updateStudentContainer input[type=text] {
+    text-align: center;
 }

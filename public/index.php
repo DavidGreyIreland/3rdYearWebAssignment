@@ -26,6 +26,8 @@ $app->get('/removeStudent',  controller('Itb', 'admin/removeStudent'));
 $app->get('/updateStudent',  controller('Itb', 'admin/updateStudent'));
 $app->get('/removeStudentForm/{id}',  controller('Itb', 'admin/removeStudentForm'));
 $app->post('/addStudentForm',  controller('Itb', 'admin/addStudentForm'));
+$app->get('/addList',  controller('Itb', 'admin/addList'));
+
 $app->get('/updateStudentForm/{id}',  controller('Itb', 'admin/updateStudentForm'));
 
 $app->get('/adminCodes',  controller('Itb', 'admin/codes'));

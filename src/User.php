@@ -122,13 +122,13 @@ class User extends DatabaseTable
     }
 
     /**
-     * if record exists with $username, return User object for that record
-     * otherwise return 'null'
-     *
-     * @param $username
-     *
-     * @return mixed|null
-     */
+ * if record exists with $username, return User object for that record
+ * otherwise return 'null'
+ *
+ * @param $username
+ *
+ * @return mixed|null
+ */
     public static function getOneByUsername($username)
     {
         $db = new DatabaseManager();

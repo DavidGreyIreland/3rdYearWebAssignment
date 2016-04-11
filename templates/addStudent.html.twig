@@ -1,5 +1,4 @@
 {% extends '_base.html.twig' %}
-{% extends 'admin.html.twig' %}
 
 {# ------------------------------------------------- #}
 {% block pageTitle %}Add Student{% endblock %}
@@ -21,34 +20,51 @@
 
             <h2>Students</h2>
 
-            <table>
-                <tr>
-                    <th>First name</th>
-                    <th>Surname</th>
-                    <th>Current Belt Grading</th>
-                    <th>Next Belt Grading Syllabus</th>
-                    <th>Current Status</th>
-                    <th>Required Status</th>
-                    <th>Next Grading</th>
-                    <th>Admin</th>
-                </tr>
-
-                <!--calls from the Student.php class the following methods-->
-                {% for student in students %}
+            <form method="post" action="/addStudentForm">
+                <table>
                     <tr>
-                        <td>{{ student.firstName }}</td>
-                        <td>{{ student.surname }}</td>
-                        <td>{{ student.currentBeltGrade }}</td>
-                        <td>{{ student.nextBeltGradingSyllabus }}</td>
-                        <td>{{ student.currentStatus }}</td>
-                        <td>{{ student.requiredStatus }}</td>`
-                        <td>{{ student.nextGrading }}</td>
-                        <td>{{ student.admin }}</td>
+                        <th>First name</th>
+                        <th>Surname</th>
+                        <th>Current Belt Grading</th>
+                        <th>Next Belt Grading Syllabus</th>
+                        <th>Current Status</th>
+                        <th>Required Status</th>
+                        <th>Next Grading</th>
+                        <th>Admin</th>
+                        <th></th>
                     </tr>
-                {% endfor %}
 
-            </table>
+                    <!--calls from the Student.php class the following methods-->
+                    {% for student in students %}
+                        <tr>
+                            <td>{{ student.firstName }}</td>
+                            <td>{{ student.surname }}</td>
+                            <td>{{ student.currentBeltGrade }}</td>
+                            <td>{{ student.nextBeltGradingSyllabus }}</td>
+                            <td>{{ student.currentStatus }}</td>
+                            <td>{{ student.requiredStatus }}</td>`
+                            <td>{{ student.nextGrading }}</td>
+                            <td>{{ student.role }}</td>
+                            <td></td>
+                        </tr>
+                    {% endfor %}
+                    <tr></tr>
+                    <tr></tr>
 
+                    <tr>
+                        <td><input type="text" name="firstName"autofocus></td>
+                        <td><input type="text" name="surname"></td>
+                        <td><input type="text" name="currentBeltGrading"></td>
+                        <td><input type="text" name="nextBeltGradingSyllabus"></td>
+                        <td><input type="text" name="currentStatus"></td>
+                        <td><input type="text" name="requiredStatus"></td>
+                        <td><input type="text" name="nextGrading"></td>
+                        <td><input type="number" name="role"></td>
+                        <td><input type="submit" name="Add" value="Add"></td>
+                    </tr>
+
+                </table>
+            </form>
         </div>
 
     </div>

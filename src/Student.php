@@ -6,7 +6,10 @@ use Mattsmithdev\PdoCrud\DatabaseManager;
 
 class Student extends DatabaseTable
 {
-    private $studentId;
+    const ROLE_USER = 0;
+    const ROLE_ADMIN = 1;
+
+    private $id;
     private $currentBeltGrade;
     private $nextBeltGradingSyllabus;
     private $currentStatus;
@@ -14,22 +17,22 @@ class Student extends DatabaseTable
     private $nextGrading;
     private $firstName;
     private $surname;
-    private $admin;
+    private $role;
 
     /**
      * @param mixed $admin
      */
-    public function setAdmin($admin)
+    public function setRole($role)
     {
-        $this->admin = $admin;
+        $this->role = $role;
     }
 
     /**
      * @return mixed
      */
-    public function getAdmin()
+    public function getRole()
     {
-        return $this->admin;
+        return $this->role;
     }
 
     /**
@@ -147,17 +150,17 @@ class Student extends DatabaseTable
     /**
      * @param mixed $studentId
      */
-    public function setStudentId($studentId)
+    public function setId($id)
     {
-        $this->studentId = $studentId;
+        $this->id = $id;
     }
 
     /**
      * @return mixed
      */
-    public function getStudentId()
+    public function getId()
     {
-        return $this->studentId;
+        return $this->id;
     }
 
     /**
@@ -168,14 +171,14 @@ class Student extends DatabaseTable
      *
      * @return mixed|null
      */
-    public static function getOneByUsername($studentId)
+    public static function getOneByUsername($id)
     {
         $db = new DatabaseManager();
         $connection = $db->getDbh();
 
-        $sql = 'SELECT * FROM students WHERE studentId=:studentId';
+        $sql = 'SELECT * FROM students WHERE id=:id';
         $statement = $connection->prepare($sql);
-        $statement->bindParam(':studentId', $studentId, \PDO::PARAM_STR);
+        $statement->bindParam(':id', $id, \PDO::PARAM_STR);
         $statement->setFetchMode(\PDO::FETCH_CLASS, __CLASS__);
         $statement->execute();
 
