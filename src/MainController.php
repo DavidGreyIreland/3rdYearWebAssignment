@@ -6,17 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class MainController
 {
-
-/*    public function indexAction(Request $request, Application $app)
-    {
-    $students = Student::getAll();
-    $argsArray = [
-        'students' => $students,
-    ];
-    $templateName = 'index';
-    return $app['twig']->render($templateName . '.html.twig', $argsArray);
-    }*/
-
     public function indexAction(Request $request, Application $app)
     {
         $classTables = ClassTable::getAll();

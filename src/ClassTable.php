@@ -90,5 +90,4 @@ class ClassTable extends DatabaseTable
     {
         return $this->time;
     }
-
 }

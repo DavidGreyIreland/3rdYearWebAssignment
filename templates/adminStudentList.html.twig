@@ -1,0 +1,74 @@
+{% extends '_base.html.twig' %}
+
+{# ------------------------------------------------- #}
+{% block pageTitle %}Admin Student List{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block main %}
+
+    <div id="adminStudentListContainer">
+
+        <div id="adminStudentListMain">
+
+            <h1>
+                (Admin Student List Page)
+            </h1>
+
+            <h2>Students</h2>
+
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>First name</th>
+                    <th>Surname</th>
+                    <th>Current Belt Grading</th>
+                    <th>Next Belt Grading Syllabus</th>
+                    <th>Current Status</th>
+                    <th>Required Status</th>
+                    <th>Next Grading</th>
+                    <th>Admin</th>
+                    <th>Update/Add</th>
+                    <th>Remove</th>
+                </tr>
+
+                {% for student in students %}
+                    <form method="post" action="/processUpdateRemoveStudent">
+                        <tr>
+                            <td><input type="text" name="id" value="{{ student.id }}"></td>
+                            <td><input type="text" name="firstName" value="{{ student.firstName }}"></td>
+                            <td><input type="text" name="surname" value="{{ student.surname }}"></td>
+                            <td><input type="text" name="currentBeltGrading" value="{{ student.currentBeltGrade }}"></td>
+                            <td><input type="text" name="nextBeltGradingSyllabus" value="{{ student.nextBeltGradingSyllabus }}"></td>
+                            <td><input type="text" name="currentStatus" value="{{ student.currentStatus }}"></td>
+                            <td><input type="text" name="requiredStatus" value="{{ student.requiredStatus }}"></td>`
+                            <td><input type="text" name="nextGrading" value="{{ student.nextGrading }}"></td>
+                            <td><input type="text" name="role" value="{{ student.role }}"></td>
+                            <td><input type="submit" name="update" value="Update"></td>
+                            <td><input type="submit" name="remove" value="Remove"></td>
+                        </tr>
+
+                    </form>
+                {% endfor %}
+
+                <form method="post" action="/processAddStudent">
+                    <tr>
+                        <td>N/A</td>
+                        <td><input type="text" name="firstName"autofocus></td>
+                        <td><input type="text" name="surname"></td>
+                        <td><input type="text" name="currentBeltGrading"></td>
+                        <td><input type="text" name="nextBeltGradingSyllabus"></td>
+                        <td><input type="text" name="currentStatus"></td>
+                        <td><input type="text" name="requiredStatus"></td>
+                        <td><input type="text" name="nextGrading"></td>
+                        <td><input type="number" name="role"></td>
+                        <td><input type="submit" name="add" value="Add"></td>
+                    </tr>
+                </form>
+
+            </table>
+
+        </div>
+
+    </div>
+
+{% endblock %}

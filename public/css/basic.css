@@ -6,6 +6,10 @@ header {
     text-align: center;
 }
 
+header img {
+    border: .5rem solid black;
+}
+
 /* ------- table contents --------- */
 th, td, tr {
     border: solid black 0.1rem
@@ -58,91 +62,30 @@ th {
 /****************************************************************/
 /************************** adminLogin container *********************/
 
-#adminIndexContainer {
-    display: flex;
+#adminStudentListContainer table {
+    margin-left: 13.5%;
 }
 
-#adminIndexMain {
-    flex: 4.5;
-}
-
-#adminIndexContainer table {
-    margin-left: 13%;
-}
-
-#adminIndexContainer h1{
-     margin-left: 51%;
+#adminStudentListContainer h1{
+     margin-left: 41%;
  }
 
-#adminIndexContainer h2{
-    margin-left: 54%;
+#adminStudentListContainer h2{
+    margin-left: 48%;
 }
 
-#adminIndexContainer th, #adminIndexContainer td, #adminIndexContainer input[type=text] {
-    width: 10rem;
+#adminStudentListContainer  th, #adminStudentListContainer  td, #adminStudentListContainer  input[type=text] {
+    width: 8rem;
+    text-align: center;
 }
 
 /****************************************************************/
-/************************** admin aside nav container *********************/
+/************************** adminAttendance container *********************/
 
-#adminIndexContainer aside ul {
-    width: 50%;
-    list-style-type: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 40%;
+#adminAttendanceMain h1{
+    margin-left: 46%;
 }
 
-#adminIndexContainer aside{
-    flex: 1;
-}
-
-#adminIndexContainer aside li {
-    padding: .5rem;
-}
-
-#adminIndexContainer aside a {
-    display: block;
-    border: 0.2rem solid black;
-    padding: 0.2rem;
-    background: lightseagreen;
-    text-align: center;
-    color: black;
-    text-decoration:none;
-}
-
-#removeStudentContainer input[type=submit] {
-     width: 10rem;
-     height: 1.5rem;
- }
-
-#removeStudentMain table, #updateStudentMain table
-{
-    margin-left: 10%;
-}
-
-#removeStudentContainer h1, #updateStudentMain h1 {
-    margin-left: 38%;
-}
-
-#removeStudentContainer h2, #updateStudentMain h2 {
-     margin-left: 44%;
- }
-
-#addStudentContainer h1 {
-    margin-left: 38%;
-}
-
-#addStudentContainer h2 {
-    margin-left: 44%;
-}
-
-#addStudentContainer input[type=submit], #updateStudentContainer input[type=submit] {
-    width: 10rem;
-    height: 1.5rem;
-}
-
-#addStudentContainer input[type=text], #updateStudentContainer input[type=text] {
-    text-align: center;
+#adminAttendanceMain table{
+    margin-left: 41%;
 }

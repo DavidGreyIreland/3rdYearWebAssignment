@@ -7,6 +7,16 @@
 {% block main %}
 
     <div id="adminIndexContainer">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/adminStudentList">Student List</a>
+                </li>
+                <li>
+                    <a href="/adminAttendance">Attendance</a>
+                </li>
+            </ul>
+        </nav>
 
         <div id="adminIndexMain">
 
@@ -16,49 +26,10 @@
 
             <h2>Students</h2>
 
-            <table>
-                <tr>
-                    <th>First name</th>
-                    <th>Surname</th>
-                    <th>Current Belt Grading</th>
-                    <th>Next Belt Grading Syllabus</th>
-                    <th>Current Status</th>
-                    <th>Required Status</th>
-                    <th>Next Grading</th>
-                    <th>Admin</th>
-                </tr>
 
-                {% for student in students %}
-                    <tr>
-                        <!--calls from the Student.php class the following methods-->
-                        <td>{{ student.firstName }}</td>
-                        <td>{{ student.surname }}</td>
-                        <td>{{ student.currentBeltGrade }}</td>
-                        <td>{{ student.nextBeltGradingSyllabus }}</td>
-                        <td>{{ student.currentStatus }}</td>
-                        <td>{{ student.requiredStatus }}</td>`
-                        <td>{{ student.nextGrading }}</td>
-                        <td>{{ student.role }}</td>
-                    </tr>
-                {% endfor %}
 
-            </table>
 
         </div>
-
-        <aside>
-            <ul>
-                <li>
-                    <a href="/addStudent" class="{% block addStudentLinkStyle %}{% endblock %}">Add</a>
-                </li>
-                <li>
-                    <a href="/removeStudent" class="{% block removeStudentLinkStyle %}{% endblock %}">Remove</a>
-                </li>
-                <li>
-                    <a href="/updateStudent" class="{% block updateStudentLinkStyle %}{% endblock %}">Update</a>
-                </li>
-            </ul>
-        </aside>
 
     </div>
 

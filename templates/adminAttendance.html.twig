@@ -1,0 +1,35 @@
+{% extends '_base.html.twig' %}
+
+{# ------------------------------------------------- #}
+{% block pageTitle %}Admin{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block main %}
+
+    <div id="adminAttendanceContainer">
+
+        <div id="adminAttendanceMain">
+
+            <h1>Attendance</h1>
+
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Class</th>
+                </tr>
+
+                {% for attendance in attendances %}
+                    <tr>
+                        <td>{{ attendance.id }}"</td>
+                        <td>{{ attendance.time }}"</td>
+                        <td>{{ attendance.class }}"</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+    </div>
+
+{% endblock %}

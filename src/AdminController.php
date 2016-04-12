@@ -7,8 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AdminController
 {
-    // action for route:    /admin
-    // will we allow access to the Admin home?
     public function adminIndexAction(Request $request, Application $app)
     {
         $students = Student::getAll();
@@ -16,6 +14,17 @@ class AdminController
             'students' => $students,
         ];
         $templateName = 'adminIndex';// index is within folder admin in templates folder
+        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+    }
+
+
+    public function adminAttendanceAction(Request $request, Application $app)
+    {
+        $attendances = Attendance::getAll();
+        $argsArray = [
+            'attendances' => $attendances,
+        ];
+        $templateName = 'adminAttendance';
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
 
@@ -47,39 +56,73 @@ class AdminController
     }
 
 
-    // this is the student table shown on the admin index page
-    public function adminStudentTableAction(Request $request, Application $app)
-    {
-        $argsArray = [
-        ];
-        $templateName = 'adminStudentTableAction';// index is within folder admin in templates folder
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
-    }
-
-
-    public function addStudentAction(Request $request, Application $app)
+    // action for route:    /admin
+    // will we allow access to the Admin home?
+    public function adminStudentListAction(Request $request, Application $app)
     {
         $students = Student::getAll();
         $argsArray = [
             'students' => $students,
         ];
-        $templateName = 'addStudent';// index is within folder admin in templates folder
+        $templateName = 'adminStudentList';
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
 
 
-    public function removeStudentAction(Request $request, Application $app)
+    public function processUpdateRemoveStudentAction(Request $request, Application $app)
     {
-        $students = Student::getAll();
-        $argsArray = [
-            'students' => $students,
-        ];
-        $templateName = 'removeStudent';// index is within folder admin in templates folder
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+        $paramsPost = $request->request->all();
+/*        var_dump("hey there");
+        die();*/
+        if($paramsPost['update'])
+        {
+            $id = $paramsPost['id'];
+            $firstName = $paramsPost['firstName'];
+            $surname = $paramsPost['surname'];
+            $currentBeltGrading = $paramsPost['currentBeltGrading'];
+            $nextGrading = $paramsPost['nextGrading'];
+            $currentStatus = $paramsPost['currentStatus'];
+            $requiredStatus = $paramsPost['requiredStatus'];
+            $admin = $paramsPost['role'];
+            $nextBeltGradingSyllabus = $paramsPost['nextBeltGradingSyllabus'];
 
+            $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
+            $firstName = filter_var($firstName, FILTER_SANITIZE_STRING);
+            $surname = filter_var($surname, FILTER_SANITIZE_STRING);
+            $currentBeltGrade = filter_var($currentBeltGrading, FILTER_SANITIZE_STRING);
+            $nextBeltGradingSyllabus = filter_var($nextBeltGradingSyllabus, FILTER_SANITIZE_STRING);
+            $currentStatus = filter_var($currentStatus, FILTER_SANITIZE_STRING);
+            $requiredStatus = filter_var($requiredStatus, FILTER_SANITIZE_STRING);
+            $nextGrading = filter_var($nextGrading, FILTER_SANITIZE_STRING);
+            $admin = filter_var($admin, FILTER_SANITIZE_NUMBER_INT);
+
+            $students = new Student();
+            $students->setId($id);
+            $students->setFirstName($firstName);
+            $students->setSurname($surname);
+            $students->setCurrentBeltGrade($currentBeltGrade);
+            $students->setNextBeltGradingSyllabus($nextBeltGradingSyllabus);
+            $students->setCurrentStatus($currentStatus);
+            $students->setRequiredStatus($requiredStatus);
+            $students->setNextGrading($nextGrading);
+            $students->setRole($admin);
+
+            Student::update($students);
+
+            return $app->redirect('/adminStudentList');
+        }
+        elseif($paramsPost['remove'])
+        {
+            $id = $paramsPost['id'];
+            $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
+            Student::delete($id);
+
+            return $app->redirect('/adminStudentList');
+        }
     }
 
-    public function addStudentFormAction(Request $request, Application $app)
+
+    public function processAddStudentAction(Request $request, Application $app)
     {
         $paramsPost = $request->request->all();
 
@@ -113,69 +156,6 @@ class AdminController
 
         Student::insert($students);
 
-        return $app->redirect('/addStudent');
+        return $app->redirect('/adminStudentList');
     }
-
-
-    public function removeStudentFormAction(Request $request, Application $app, $id)
-    {
-        Student::delete($id);
-
-        return $app->redirect('/removeStudent');
-    }
-
-
-    public function processUpdateStudentAction(Request $request, Application $app)
-    {
-        $paramsPost = $request->request->all();
-
-        $id = $paramsPost['id'];
-        $firstName = $paramsPost['firstName'];
-        $surname = $paramsPost['surname'];
-        $currentBeltGrading = $paramsPost['currentBeltGrading'];
-        $nextGrading = $paramsPost['nextGrading'];
-        $currentStatus = $paramsPost['currentStatus'];
-        $requiredStatus = $paramsPost['requiredStatus'];
-        $admin = $paramsPost['role'];
-        $nextBeltGradingSyllabus = $paramsPost['nextBeltGradingSyllabus'];
-
-        $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
-        $firstName = filter_var($firstName, FILTER_SANITIZE_STRING);
-        $surname = filter_var($surname, FILTER_SANITIZE_STRING);
-        $currentBeltGrade = filter_var($currentBeltGrading, FILTER_SANITIZE_STRING);
-        $nextBeltGradingSyllabus = filter_var($nextBeltGradingSyllabus, FILTER_SANITIZE_STRING);
-        $currentStatus = filter_var($currentStatus, FILTER_SANITIZE_STRING);
-        $requiredStatus = filter_var($requiredStatus, FILTER_SANITIZE_STRING);
-        $nextGrading = filter_var($nextGrading, FILTER_SANITIZE_STRING);
-        $admin = filter_var($admin, FILTER_SANITIZE_NUMBER_INT);
-
-        $students = new Student();
-        $students->setId($id);
-        $students->setFirstName($firstName);
-        $students->setSurname($surname);
-        $students->setCurrentBeltGrade($currentBeltGrade);
-        $students->setNextBeltGradingSyllabus($nextBeltGradingSyllabus);
-        $students->setCurrentStatus($currentStatus);
-        $students->setRequiredStatus($requiredStatus);
-        $students->setNextGrading($nextGrading);
-        $students->setRole($admin);
-
-        Student::update($students);
-
-        //var_dump($students);
-        //die();
-
-        return $app->redirect('/updateStudent');
-    }
-
-    public function updateStudentAction(Request $request, Application $app)
-    {
-        $students = Student::getAll();
-        $argsArray = [
-            'students' => $students,
-        ];
-        $templateName = 'updateStudent';// index is within folder admin in templates folder
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
-    }
-
 }

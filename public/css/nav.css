@@ -1,11 +1,11 @@
 /* ------- nav ------- */
 nav {
-    margin-left: 10%;
+    margin-left: 13%;
 }
 
 nav ul {
     display: flex;
-    width: 80%;
+    width: 85%;
     list-style-type: none;
     margin: 0;
     padding: 0;
