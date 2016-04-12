@@ -36,7 +36,7 @@
 
                     <!--calls from the Student.php class the following methods-->
                     {% for student in students %}
-                        <form method="post" action="/updateStudentForm">
+                        <form method="post" action="/processUpdateStudent">
                             <tr>
                                 <td><input type="text" name="id" value="{{ student.id }}"></td>
                                 <td><input type="text" name="firstName" value="{{ student.firstName }}"></td>

@@ -113,12 +113,7 @@ class AdminController
 
         Student::insert($students);
 
-        $students = Student::getAll();
-        $argsArray = [
-            'students' => $students,
-        ];
-        $templateName = 'addStudent';// index is within folder admin in templates folder
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+        return $app->redirect('/addStudent');
     }
 
 
@@ -126,16 +121,11 @@ class AdminController
     {
         Student::delete($id);
 
-        $students = Student::getAll();
-        $argsArray = [
-            'students' => $students,
-        ];
-        $templateName = 'removeStudent';// index is within folder admin in templates folder
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+        return $app->redirect('/removeStudent');
     }
 
 
-    public function updateStudentFormAction(Request $request, Application $app)
+    public function processUpdateStudentAction(Request $request, Application $app)
     {
         $paramsPost = $request->request->all();
 
@@ -172,16 +162,10 @@ class AdminController
 
         Student::update($students);
 
-        $students = Student::getAll();
-
         //var_dump($students);
         //die();
 
-        $argsArray = [
-            'students' => $students,
-        ];
-        $templateName = 'updateStudent';// index is within folder admin in templates folder
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+        return $app->redirect('/updateStudent');
     }
 
     public function updateStudentAction(Request $request, Application $app)
