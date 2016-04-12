@@ -135,7 +135,7 @@ class AdminController
     }
 
 
-    public function updateStudentFormAction(Request $request, Application $app, $id)
+    public function updateStudentFormAction(Request $request, Application $app)
     {
         $paramsPost = $request->request->all();
 
@@ -173,6 +173,10 @@ class AdminController
         Student::update($students);
 
         $students = Student::getAll();
+
+        //var_dump($students);
+        //die();
+
         $argsArray = [
             'students' => $students,
         ];

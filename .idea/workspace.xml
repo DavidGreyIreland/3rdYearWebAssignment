@@ -22,53 +22,106 @@
     <favorites_list name="3rdYearWebAssignment" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="870" selection-end="870" vertical-scroll-proportion="-10.461538" vertical-offset="153" max-vertical-offset="1139">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminIndex.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/adminIndex.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="-0.0" vertical-offset="68" max-vertical-offset="1190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AdminController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="25" selection-start="6619" selection-end="6627" vertical-scroll-proportion="0.44956413" vertical-offset="2546" max-vertical-offset="3349">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addStudent.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/addStudent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="-17.192308" vertical-offset="437" max-vertical-offset="1309">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateStudent.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/updateStudent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-15.038462" vertical-offset="204" max-vertical-offset="1088">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="30" column="30" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-13.730769" vertical-offset="153" max-vertical-offset="1139">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LoginController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/LoginController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="16" selection-start="1080" selection-end="1080" vertical-scroll-proportion="20.923077" vertical-offset="1054" max-vertical-offset="1887">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MainController.php" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/MainController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="43" column="43" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.86545455" vertical-offset="0" max-vertical-offset="952">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="adminIndex.html.twig" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/adminIndex.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1190">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/AdminController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="174" column="38" selection-start="6664" selection-end="6664" vertical-scroll-proportion="-19.961538" vertical-offset="2422" max-vertical-offset="3417">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DatabaseTable.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vendor/mattsmithdev/pdo-crud-for-free/src/DatabaseTable.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="147" column="35" selection-start="4578" selection-end="4578" vertical-scroll-proportion="-25.346153" vertical-offset="1840" max-vertical-offset="2652">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="addStudent.html.twig" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/addStudent.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="52" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1309">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="updateStudent.html.twig" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/updateStudent.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="43" column="79" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-20.115385" vertical-offset="208" max-vertical-offset="1122">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="removeStudent.html.twig" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/removeStudent.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="38" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1071">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/AdminController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="177" column="10" selection-start="6707" selection-end="6707" vertical-scroll-proportion="0.48979592" vertical-offset="2584" max-vertical-offset="3417">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -88,20 +141,21 @@
         <option value="$PROJECT_DIR$/public/css/basic.css" />
         <option value="$PROJECT_DIR$/src/AdminControllerB.php" />
         <option value="$PROJECT_DIR$/templates/addStudent.html.twig" />
-        <option value="$PROJECT_DIR$/templates/removeStudent.html.twig" />
-        <option value="$PROJECT_DIR$/templates/updateStudent.html.twig" />
         <option value="$PROJECT_DIR$/src/User.php" />
         <option value="$PROJECT_DIR$/public/seed.php" />
+        <option value="$PROJECT_DIR$/templates/removeStudent.html.twig" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/templates/updateStudent.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -129,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -286,10 +339,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../evote-dvd-master/eVote_dvd_version18_createDBrecord" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../evote-dvd-master/eVote_dvd_version23_updateDB" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistory" value="" />
@@ -332,15 +386,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.279476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1400426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -394,11 +448,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1394" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/seed.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="41" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="867" />
@@ -515,11 +564,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11696" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -528,19 +577,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11696" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.4214876" vertical-offset="357" max-vertical-offset="11696" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utility/helperFunctions.php">
@@ -551,11 +600,6 @@
     <entry file="file://$PROJECT_DIR$/src/Utility.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="872" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mattsmithdev/pdo-crud-for-free/src/DatabaseTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.1347518" vertical-offset="1806" max-vertical-offset="2652" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -578,36 +622,14 @@
         <state line="19" column="29" selection-start="427" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="799" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="872" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StudentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/removeStudent.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="20" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="51" selection-start="427" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/setup.php">
@@ -627,25 +649,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="26" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.42434987" vertical-offset="1766" max-vertical-offset="2635">
-          <folding>
-            <element signature="e#22#61#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="125" column="26" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.42434987" vertical-offset="1766" max-vertical-offset="2635" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/seed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="17" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-26.653847" vertical-offset="191" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="870" selection-end="870" vertical-scroll-proportion="-10.461538" vertical-offset="153" max-vertical-offset="1139">
-          <folding />
-        </state>
+        <state line="53" column="17" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-26.653847" vertical-offset="191" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/adminIndex.html.twig">
@@ -657,21 +666,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/addStudent.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="-17.192308" vertical-offset="437" max-vertical-offset="1309">
+        <state line="52" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/removeStudent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="38" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mattsmithdev/pdo-crud-for-free/src/DatabaseManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.33939394" vertical-offset="280" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mattsmithdev/pdo-crud-for-free/src/DatabaseTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="35" selection-start="4578" selection-end="4578" vertical-scroll-proportion="-25.346153" vertical-offset="1840" max-vertical-offset="2652">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="30" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-13.730769" vertical-offset="153" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/updateStudent.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-15.038462" vertical-offset="204" max-vertical-offset="1088">
+        <state line="43" column="79" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-20.115385" vertical-offset="208" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="16" selection-start="1080" selection-end="1080" vertical-scroll-proportion="20.923077" vertical-offset="1054" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="493" selection-end="493" vertical-scroll-proportion="0.35030302" vertical-offset="0" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="25" selection-start="6619" selection-end="6627" vertical-scroll-proportion="0.44956413" vertical-offset="2546" max-vertical-offset="3349">
+        <state line="174" column="38" selection-start="6664" selection-end="6664" vertical-scroll-proportion="-19.961538" vertical-offset="2422" max-vertical-offset="3417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="43" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.86545455" vertical-offset="0" max-vertical-offset="952">
           <folding />
         </state>
       </provider>
