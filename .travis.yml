@@ -4,4 +4,4 @@ php:
   - 5.4
   - 7
   - hhvm
-script: phpunit ProductTest.pph
+script: phpunit ProductTest.php
