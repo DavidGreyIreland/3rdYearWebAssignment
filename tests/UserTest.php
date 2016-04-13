@@ -8,6 +8,7 @@
 
 namespace Itb;
 use Itb\User;
+use Itb\DatabaseTable;
 
 class UserTest extends \PHPUnit_Framework_TestCase
 {
@@ -50,12 +51,13 @@ class UserTest extends \PHPUnit_Framework_TestCase
     public function testGetPassword()
     {
         $user = new User();
+        $database = new DatabaseTable();
         $user->setPassword("1234");
 
         $expectedResult = "1234";
         $result = $user->getPassword();
-        $boolean = password_verify($result, $expectedResult);
+        $boolean = $database->password_verify($result, $expectedResult);
         $boolean2 = true;
-        $this->assertNotEquals($boolean, $boolean2);
+        $this->assertEquals($boolean, $boolean2);
     }
 } 
