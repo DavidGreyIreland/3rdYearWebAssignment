@@ -1,26 +1,89 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: David
+ * Date: 20/02/2016
+ * Time: 20:00
+ */
 namespace Itb;
 
 use Mattsmithdev\PdoCrud\DatabaseTable;
 use Mattsmithdev\PdoCrud\DatabaseManager;
 
+/**
+ * Class Student manages student details
+ * @package Itb
+ */
 class Student extends DatabaseTable
 {
+    /**
+     * user role
+     * @var const
+     */
     const ROLE_USER = 0;
+
+    /**
+     * admin role
+     * @var const
+     */
     const ROLE_ADMIN = 1;
 
+    /**
+     * id
+     * @var int
+     */
     private $id;
+
+    /**
+     * currentBeltGrade
+     * @var String
+     */
     private $currentBeltGrade;
+
+    /**
+     * nextBeltGradingSyllabus
+     * @var String
+     */
     private $nextBeltGradingSyllabus;
+
+    /**
+     * currentStatus
+     * @var String
+     */
     private $currentStatus;
+
+    /**
+     * requiredStatus
+     * @var String
+     */
     private $requiredStatus;
+
+    /**
+     * $nextGrading
+     * @var String
+     */
     private $nextGrading;
+
+    /**
+     * firstname
+     * @var String
+     */
     private $firstName;
+
+    /**
+     * surname
+     * @var String
+     */
     private $surname;
+
+    /**
+     * role
+     * @var int
+     */
     private $role;
 
     /**
-     * @param mixed $admin
+     * @param int $role
      */
     public function setRole($role)
     {
@@ -28,7 +91,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getRole()
     {
@@ -36,7 +99,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $firstName
+     * @param String $firstName
      */
     public function setFirstName($firstName)
     {
@@ -44,7 +107,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getFirstName()
     {
@@ -52,7 +115,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $surname
+     * @param String $surname
      */
     public function setSurname($surname)
     {
@@ -60,7 +123,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getSurname()
     {
@@ -68,7 +131,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $currentBeltGrade
+     * @param String $currentBeltGrade
      */
     public function setCurrentBeltGrade($currentBeltGrade)
     {
@@ -76,7 +139,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getCurrentBeltGrade()
     {
@@ -84,7 +147,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $currentStatus
+     * @param String $currentStatus
      */
     public function setCurrentStatus($currentStatus)
     {
@@ -92,7 +155,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getCurrentStatus()
     {
@@ -100,7 +163,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $nextBeltGradingSyllabus
+     * @param String $nextBeltGradingSyllabus
      */
     public function setNextBeltGradingSyllabus($nextBeltGradingSyllabus)
     {
@@ -108,7 +171,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getNextBeltGradingSyllabus()
     {
@@ -116,7 +179,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $nextGrading
+     * @param String $nextGrading
      */
     public function setNextGrading($nextGrading)
     {
@@ -124,7 +187,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getNextGrading()
     {
@@ -132,7 +195,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $requiredStatus
+     * @param String $requiredStatus
      */
     public function setRequiredStatus($requiredStatus)
     {
@@ -140,7 +203,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getRequiredStatus()
     {
@@ -148,7 +211,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @param mixed $studentId
+     * @param int $studentId
      */
     public function setId($id)
     {
@@ -156,7 +219,7 @@ class Student extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -169,7 +232,7 @@ class Student extends DatabaseTable
      *
      * @param $username
      *
-     * @return mixed|null
+     * @return object|null
      */
     public static function getOneByUsername($id)
     {

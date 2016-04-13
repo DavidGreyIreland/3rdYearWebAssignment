@@ -1,21 +1,60 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: David
+ * Date: 20/02/2016
+ * Time: 20:00
+ */
 namespace Itb;
 
 use Mattsmithdev\PdoCrud\DatabaseTable;
 use Mattsmithdev\PdoCrud\DatabaseManager;
 
+/**
+ * Class User manages user login details
+ * @package Itb
+ */
 class User extends DatabaseTable
 {
+    /**
+     * user role
+     * @var const
+     */
     const ROLE_USER = 0;
+
+    /**
+     * admin role
+     * @var const
+     */
     const ROLE_ADMIN = 1;
 
+    /**
+     * id
+     * @var int
+     */
     private $id;
+
+    /**
+     * username
+     * @var String
+     */
     private $username;
+
+    /**
+     * password
+     * @var String
+     */
     private $password;
+
+    /**
+     * role
+     * @var int
+     */
     private $role;
 
     /**
-     * @return mixed
+     * gets id
+     * @return int
      */
     public function getId()
     {
@@ -23,7 +62,8 @@ class User extends DatabaseTable
     }
 
     /**
-     * @param mixed $id
+     * sets id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -31,7 +71,8 @@ class User extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * gets username
+     * @return String
      */
     public function getUsername()
     {
@@ -39,7 +80,8 @@ class User extends DatabaseTable
     }
 
     /**
-     * @param mixed $username
+     * sets username
+     * @param String $username
      */
     public function setUsername($username)
     {
@@ -47,7 +89,8 @@ class User extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * gets password
+     * @return String
      */
     public function getPassword()
     {
@@ -55,7 +98,8 @@ class User extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * get role
+     * @return int
      */
     public function getRole()
     {
@@ -63,7 +107,8 @@ class User extends DatabaseTable
     }
 
     /**
-     * @param mixed $role
+     * sets role
+     * @param int $role
      */
     public function setRole($role)
     {
@@ -72,7 +117,7 @@ class User extends DatabaseTable
 
     /**
      * hash the password before storing ...
-     * @param mixed $password
+     * @param String $password
      */
     public function setPassword($password)
     {
@@ -109,6 +154,13 @@ class User extends DatabaseTable
         }*/
     }
 
+
+    /**
+     * return role which matches username
+     * @param $username
+     *
+     * @return int
+     */
     public static function canFindMatchingUsernameAndRole($username)
     {
         $user = User::getOneByUsername($username);
@@ -127,7 +179,7 @@ class User extends DatabaseTable
  *
  * @param $username
  *
- * @return mixed|null
+ * @return object|null
  */
     public static function getOneByUsername($username)
     {

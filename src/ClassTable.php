@@ -1,18 +1,53 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: David
+ * Date: 20/02/2016
+ * Time: 20:00
+ */
+
 namespace Itb;
 
 use Mattsmithdev\PdoCrud\DatabaseTable;
 
+/**
+ * Class ClassTable timetable
+ * @package Itb
+ */
 class ClassTable extends DatabaseTable
 {
+    /**
+     * id
+     * @var int
+     */
     private $id;
+
+    /**
+     * day
+     * @var String
+     */
     private $day;
+
+    /**
+     * activity
+     * @var String
+     */
     private $activity;
+
+    /**
+     * time
+     * @var String
+     */
     private $time;
+
+    /**
+     * grade
+     * @var String
+     */
     private $grade;
 
     /**
-     * @param mixed $activity
+     * @param String $activity
      */
     public function setActivity($activity)
     {
@@ -20,7 +55,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getActivity()
     {
@@ -28,7 +63,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @param mixed $day
+     * @param String $day
      */
     public function setDay($day)
     {
@@ -36,7 +71,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getDay()
     {
@@ -44,7 +79,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @param mixed $grade
+     * @param String $grade
      */
     public function setGrade($grade)
     {
@@ -52,7 +87,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getGrade()
     {
@@ -60,7 +95,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @param mixed $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -68,7 +103,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -76,7 +111,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @param mixed $time
+     * @param String $time
      */
     public function setTime($time)
     {
@@ -84,7 +119,7 @@ class ClassTable extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getTime()
     {

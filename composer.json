@@ -8,5 +8,20 @@
         "psr-4":{
             "Itb\\":"src"
         }
+    },
+    "scripts":{
+        "phpunit":"php phpunit.phar tests --log-tap ./tests/log.txt",
+        "phpunit-coverage":"php phpunit.phar tests --coverage-html ./tests/coverage",
+
+        "reportfixsrc":"php php-cs-fixer.phar fix --level=psr2 --dry-run --diff ./src > ./tests/fixerReport.txt",
+        "reportfixtests":"php php-cs-fixer.phar fix --level=psr2 --dry-run --diff ./tests > ./tests/fixerReport.txt",
+        "reportfixpublic":"php php-cs-fixer.phar fix --level=psr2 --dry-run --diff ./public > ./tests/fixerReport.txt",
+
+        "fixsrc":"php php-cs-fixer.phar fix --level=psr2 ./src",
+        "fixpublic":"php php-cs-fixer.phar fix --level=psr2 ./public",
+        "fixtests":"php php-cs-fixer.phar fix --level=psr2 ./tests",
+
+        "phpdoc": "php phpDocumentor.phar -d ./src -t ./src/documentation",
+        "phpdoc-twig": "php phpDocumentor.phar -d ./src -t ./src/documentation --template='responsive-twig'"
     }
 }

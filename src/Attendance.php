@@ -1,17 +1,41 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: David
+ * Date: 20/02/2016
+ * Time: 20:00
+ */
 namespace Itb;
 
 use Mattsmithdev\PdoCrud\DatabaseTable;
 
+/**
+ * Class Attendance
+ * @package Itb
+ */
 class Attendance extends DatabaseTable
 {
+    /**
+     * id
+     * @var int
+     */
     private $id;
+
+    /**
+     * time
+     * @var String
+     */
     private $time;
+
+    /**
+     * class
+     * @var String
+     */
     private $class;
 
 
     /**
-     * @param mixed $class
+     * @param String $class
      */
     public function setClass($class)
     {
@@ -19,7 +43,7 @@ class Attendance extends DatabaseTable
     }
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getClass()
     {
@@ -28,7 +52,7 @@ class Attendance extends DatabaseTable
 
 
     /**
-     * @param mixed $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -37,7 +61,7 @@ class Attendance extends DatabaseTable
 
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -46,7 +70,7 @@ class Attendance extends DatabaseTable
 
 
     /**
-     * @param mixed $time
+     * @param String $time
      */
     public function setTime($time)
     {
@@ -55,7 +79,7 @@ class Attendance extends DatabaseTable
 
 
     /**
-     * @return mixed
+     * @return String
      */
     public function getTime()
     {
