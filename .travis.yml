@@ -2,5 +2,6 @@ language: php
 php:
   - 5.5
   - 5.4
+  - 7
   - hhvm
-script: phpunit Test.pph
+script: phpunit ProductTest.pph
