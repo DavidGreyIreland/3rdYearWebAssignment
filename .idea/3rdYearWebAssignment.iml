@@ -4,6 +4,20 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/phpDocumentor.phar" />
+          <root url="phar://$MODULE_DIR$/php-cs-fixer.phar" />
+          <root url="phar://$MODULE_DIR$/phpunit.phar" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/phpDocumentor.phar" />
+          <root url="phar://$MODULE_DIR$/php-cs-fixer.phar" />
+          <root url="phar://$MODULE_DIR$/phpunit.phar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
 
