@@ -6,8 +6,9 @@
  * Time: 13:55
  */
 
-namespace Itb;
-use Itb\Attendance;
+namespace Itb\Tests;
+
+use Itb\Model\Attendance;
 
 class AttendanceTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,7 +23,7 @@ class AttendanceTest extends \PHPUnit_Framework_TestCase
         $expectedResult = 1;
         $result = $att->getId();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -36,7 +37,7 @@ class AttendanceTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "morning";
         $result = $att->getClass();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -50,6 +51,6 @@ class AttendanceTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "10:00";
         $result = $att->getTime();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
-} 
+}

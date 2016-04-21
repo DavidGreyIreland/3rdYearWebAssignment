@@ -6,8 +6,9 @@
  * Time: 13:55
  */
 
-namespace Itb;
-use Itb\User;
+namespace Itb\Tests;
+
+use Itb\Model\User;
 
 class UserTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,7 +23,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $expectedResult = 1;
         $result = $user->getId();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -36,7 +37,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "bob";
         $result = $user->getUsername();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -50,7 +51,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $expectedResult = 1;
         $result = $user->getRole();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -67,4 +68,28 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $boolean2 = true;
         $this->assertEquals($boolean, $boolean2);
     }
-} 
+
+    public function testCanFindMatchingUsernameAndPassword()
+    {
+        $user = new User();
+        $user->setPassword("1234");
+
+        $expectedResult = "1234";
+        $result = $user->getPassword();
+        $boolean = password_verify($expectedResult, $result);
+        $boolean2 = true;
+        $this->assertEquals($boolean, $boolean2);
+    }
+
+    public function testCanFindMatchingUsernameAndRole()
+    {
+        $user = new User();
+        $user->setUsername("david");
+        $user->setRole(1);
+
+        $expectedResult = 1;
+        $result = $user->getRole();
+
+        $this->assertEquals($expectedResult, $result);
+    }
+}

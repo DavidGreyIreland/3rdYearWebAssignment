@@ -2,6 +2,8 @@
 // autoloader
 // ------------
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/configDatabase.php';
+require_once __DIR__ . '/../src/utility/helperFunctions.php';
 
 // my settings
 // ------------
@@ -15,6 +17,7 @@ $twig = new Twig_Environment($loader);
 // setup Silex
 // ------------
 $app = new Silex\Application();
+//$app['debug'] = true;
 
 // register Session provider with Silex
 // -------------------------

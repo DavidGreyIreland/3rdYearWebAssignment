@@ -8,4 +8,6 @@ script: phpunit tests/ProductTest.php
 script: phpunit tests/UserTest.php
 script: phpunit tests/AttendanceTest.php
 script: phpunit tests/StudentTest.php
+script: phpunit
 
+install: composer update

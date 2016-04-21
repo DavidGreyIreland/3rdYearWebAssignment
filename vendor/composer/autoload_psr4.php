@@ -14,5 +14,8 @@ return array(
     'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
     'Silex\\' => array($vendorDir . '/silex/silex/src/Silex'),
     'Mattsmithdev\\PdoCrud\\' => array($vendorDir . '/mattsmithdev/pdo-crud-for-free/src'),
-    'Itb\\' => array($baseDir . '/src'),
+    'Itb\\Utility\\' => array($baseDir . '/src/utility'),
+    'Itb\\Test\\' => array($baseDir . '/src/tests'),
+    'Itb\\Model\\' => array($baseDir . '/src/model'),
+    'Itb\\Controller\\' => array($baseDir . '/src/controllers'),
 );

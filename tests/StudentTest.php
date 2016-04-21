@@ -6,8 +6,9 @@
  * Time: 13:55
  */
 
-namespace Itb;
-use Itb\Student;
+namespace Itb\Tests;
+
+use Itb\Model\Student;
 
 /**
  * testing the Student class
@@ -27,7 +28,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = 1;
         $result = $student->getId();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -41,7 +42,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = 1;
         $result = $student->getRole();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -55,7 +56,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "david";
         $result = $student->getNextgrading();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -69,7 +70,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "david";
         $result = $student->getFirstname();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -83,7 +84,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "grey";
         $result = $student->getSurname();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -97,7 +98,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "white";
         $result = $student->getCurrentbeltgrade();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -111,7 +112,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "active";
         $result = $student->getCurrentStatus();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -125,7 +126,7 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "grey";
         $result = $student->getNextBeltGradingSyllabus();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -139,6 +140,6 @@ class StudentTest extends \PHPUnit_Framework_TestCase
         $expectedResult = "active";
         $result = $student->getRequiredStatus();
 
-        $this->assertEquals($expectedResult,$result);
+        $this->assertEquals($expectedResult, $result);
     }
-} 
+}

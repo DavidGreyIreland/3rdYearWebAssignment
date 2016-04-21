@@ -6,7 +6,10 @@
     },
     "autoload":{
         "psr-4":{
-            "Itb\\":"src"
+            "Itb\\Controller\\":"src/controllers",
+            "Itb\\Model\\":"src/model",
+            "Itb\\Test\\":"src/tests",
+            "Itb\\Utility\\":"src/utility"
         }
     },
     "scripts":{
